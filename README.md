@@ -17,8 +17,7 @@ I have [many things I want to improve](./TODO.md) in the future.
 <details>
 <summary>Click to expand.</summary> 
 
-# Comming soon
-![screenshot]()
+Comming soon...
 
 </details>
 
