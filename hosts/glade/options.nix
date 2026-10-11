@@ -60,7 +60,6 @@
       dunst.enable = true;
       mate-polkit.enable = true;
       libvirt.enable = true;
-      lact.enable = true;
       sddm.enable = true;
 
       mpd = {
