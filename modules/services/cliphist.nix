@@ -45,26 +45,26 @@ in
             pkgs.wl-clipboard
           ];
         };
-        # wl-clip-persist = {
-        #   description = "Keep Wayland clipboard even after programs close";
-        #   after = [
-        #     "graphical-session.target"
-        #     "cliphist.service"
-        #   ];
-        #   wantedBy = [ "graphical-session.target" ];
-        #   partOf = [ "graphical-session.target" ];
-        #   unitConfig = {
-        #     ConditionEnvironment = "WAYLAND_DISPLAY";
-        #   };
-        #   serviceConfig = {
-        #     Type = "simple";
-        #     Restart = "always";
-        #     ExecStart = "${getExe pkgs.wl-clip-persist} --clipboard regular";
-        #   };
-        #   restartTriggers = [
-        #     pkgs.wl-clip-persist
-        #   ];
-        # };
+        wl-clip-persist = {
+          description = "Keep Wayland clipboard even after programs close";
+            after = [
+              "graphical-session.target"
+              "cliphist.service"
+            ];
+            wantedBy = [ "graphical-session.target" ];
+            partOf = [ "graphical-session.target" ];
+            unitConfig = {
+              ConditionEnvironment = "WAYLAND_DISPLAY";
+            };
+            serviceConfig = {
+              Type = "simple";
+              Restart = "always";
+              ExecStart = "${getExe pkgs.wl-clip-persist} --clipboard regular";
+            };
+            restartTriggers = [
+              pkgs.wl-clip-persist
+            ];
+         };
       };
     };
   };
